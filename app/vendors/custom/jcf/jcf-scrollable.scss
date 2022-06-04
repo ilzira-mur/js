@@ -1,0 +1,90 @@
+.jcf-scrollable-wrapper {
+  position: relative; //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: content-box;
+}
+
+.jcf-scrollbar-vertical {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: $light;
+  cursor: default;
+
+  .jcf-scrollbar-dec {
+    @extend %extend_1;
+
+    height: 0;
+  }
+
+  .jcf-scrollbar-inc {
+    top: auto;
+    bottom: 0;
+    height: 0;
+
+    @extend %extend_1;
+  }
+
+  .jcf-scrollbar-handle {
+    width: 8px;
+    height: 1px;
+    border-radius: 4px;
+    background: $green;
+    cursor: pointer;
+  }
+}
+
+.jcf-scrollbar-horizontal {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  right: auto;
+  width: 0;
+  height: 0;
+  background: $color_mercury_approx;
+
+  * {
+    display: none !important;
+  }
+
+  .jcf-scrollbar-dec {
+    @extend %extend_2;
+  }
+
+  .jcf-scrollbar-inc {
+    left: auto;
+    right: 0;
+
+    @extend %extend_2;
+  }
+
+  .jcf-scrollbar-slider {
+    display: inline-block;
+    position: relative;
+    height: 14px;
+  }
+
+  .jcf-scrollbar-handle {
+    position: absolute;
+    height: 14px;
+    background: $color_suva_gray_approx;
+  }
+}
+
+.jcf-scrollbar.jcf-inactive {
+  .jcf-scrollbar-handle {
+    visibility: hidden;
+  }
+
+  .jcf-scrollbar-dec {
+    background: $color_mercury_approx;
+  }
+
+  .jcf-scrollbar-inc {
+    background: $color_mercury_approx;
+  }
+}

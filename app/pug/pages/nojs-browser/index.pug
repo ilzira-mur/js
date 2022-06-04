@@ -1,0 +1,76 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Как включить поддержку JavaScript';
+
+block header
+block content
+  +b.browser-warning
+    +e.wrapper
+      +e.container
+        +e.title
+          | В вашем браузере отключен JavaScript  
+        +e.P.description
+          | Для корректной работы сайта необходимо включить поддержку JavaScript.
+          br
+          | Выберите браузер
+        +e.content
+          +e.content-wrapper
+            label
+              +e.INPUT.info-checker.--chrome(type="radio" name="browser" value="Chrome" checked="")
+              +e.info-checker-icon.--chrome(data-name="Chrome")
+              +e.info.--chrome
+                +e.info-text.--chrome
+                  +e.info-text-title Google Chrome:
+                  +e.P.info-text-description.--hide-on-mobile
+                    | Откройте «Настройки содержимого» (chrome://settings/content) или «Настройки» (chrome://settings/) → «Показать дополнительные настройки» → «Настройки контента» и включите рекомендуемую опцию «Разрешить всем сайтам использовать JavaScript».
+                  +e.P.info-text-description.--show-on-mobile
+                    | Откройте «Настройки» → Выберите «Настройки сайта» → JavaScript и установите переключатель в  рекомендуемый режим «Разрешено».
+            label
+              +e.INPUT.info-checker.--opera(type="radio" name="browser" value="Opera")
+              +e.info-checker-icon.--opera(data-name="Opera")
+              +e.info.--opera
+                +e.info-text.--opera
+                  +e.info-text-title Opera:
+                  +e.P.info-text-description
+                    | Меню «Инструменты» → «Настройки…» → «Дополнительно» → «Содержимое» → флаг «Включить JavaScript».
+            label
+              +e.INPUT.info-checker.--ff(type="radio" name="browser" value="Firefox")
+              +e.info-checker-icon.--ff(data-name="Firefox")
+              +e.info.--ff
+                +e.info-text.--ff
+                  +e.info-text-title Mozilla Firefox:
+                  +e.P.info-text-description
+                    | Меню «Инструменты» → «Настройки…» → «Содержимое» → флаг «Использовать JavaScript».
+            label
+              +e.INPUT.info-checker.--ya(type="radio" name="browser" value="Yandex")
+              +e.info-checker-icon.--ya(data-name="Yandex")
+              +e.info.--ya
+                +e.info-text.--ya
+                  +e.info-text-title Yandex:
+                  +e.P.info-text-description
+                    | «Настройки» → «Показать дополнительные настройки» → В блоке «Защита личных данных» выбрать «Настройки содержимого» → включить опцию «Разрешить JavaScript на всех сайтах».
+            label
+              +e.INPUT.info-checker.--safari(type="radio" name="browser" value="Safari")
+              +e.info-checker-icon.--safari(data-name="Safari")
+              +e.info.--safari
+                +e.info-text.--safari
+                  +e.info-text-title Apple Safari:
+                  +e.P.info-text-description.--hide-on-mobile
+                    | Меню «Safari» → «Свойства» → «Безопасность» → флаг «Включить JavaScript».
+                  +e.P.info-text-description.--show-on-mobile
+                    | Откройте приложение «Настройки» → Выберите Safari → Дополнения → Включите переключатель JavaScript.
+            label
+              +e.INPUT.info-checker.--ie(type="radio" name="browser" value="Internet Explorer")
+              +e.info-checker-icon.--ie(data-name="Internet Explorer")
+              +e.info.--ie
+                +e.info-text.--ie
+                  +e.info-text-title Internet Explorer:
+                  +e.P.info-text-description
+                    | Меню «Сервис» → «Свойства обозревателя» → «Безопасность» → кнопка «Другой» → строчка «Включить» в пункте «Активные сценарии».
+          +e.content-footer.--no-js
+            | По завершении 
+            +e.link(href="/" rel="nofollow") обновите страницу
+
+
+block footer

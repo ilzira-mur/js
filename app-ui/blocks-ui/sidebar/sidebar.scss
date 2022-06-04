@@ -1,0 +1,28 @@
+.UIsidebar {
+  display: flex;
+  position: relative;
+  bottom: 125px;
+  height: 100%;
+  padding-top: 125px;
+
+  &__panel {
+    position: relative;
+    width: 160px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: $dark-blue;
+  }
+
+  &__slide {
+    position: relative;
+    width: 170px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: $light-blue;
+  }
+}

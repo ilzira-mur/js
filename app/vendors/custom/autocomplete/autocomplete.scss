@@ -1,0 +1,42 @@
+@import '../../../scss/other/variables.scss';
+
+.autocomplete-suggestions {
+  box-sizing: border-box;
+  overflow: auto; // overflow: hidden;
+  // overflow-y: auto;
+  // border: 1px solid #999;
+  background: #fff;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  cursor: default;
+  color: $black;
+
+  strong {
+    font-weight: bold;
+  }
+}
+
+.autocomplete-suggestion {
+  overflow: hidden;
+  padding: 8px 16px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.autocomplete-no-suggestion {
+  padding: 2px 5px;
+}
+
+.autocomplete-selected {
+  background: #f0f0f0;
+}
+
+.autocomplete-group {
+  display: block;
+  padding: 2px 5px;
+  border-bottom: 1px solid #000;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}

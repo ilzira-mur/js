@@ -1,0 +1,64 @@
+.jcf-number {
+  display: inline-block;
+  position: relative;
+  height: 32px;
+  input {
+    //Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    padding: 3px 27px 3px 7px;
+    border: 1px solid $color_tapa_approx;
+  }
+  .jcf-btn-dec {
+    top: auto;
+    bottom: 1px;
+
+    @extend %extend_3;
+    &:hover {
+      background: $color_mercury_approx;
+    }
+    &:before {
+      margin: -1px 0 0 -4px;
+      border-color: $black transparent transparent transparent;
+
+      @extend %extend_4;
+    }
+    &.jcf-disabled:before {
+      opacity: 0.3;
+    }
+  }
+  .jcf-btn-inc {
+    @extend %extend_3;
+    &:hover {
+      background: $color_mercury_approx;
+    }
+    &:before {
+      @extend %extend_4;
+    }
+    &.jcf-disabled:before {
+      opacity: 0.3;
+    }
+  }
+  &.jcf-disabled {
+    .jcf-btn-dec {
+      &:hover {
+        background: $color_silver_chalice_approx;
+      }
+      &:before {
+        opacity: 0.3;
+      }
+    }
+    .jcf-btn-inc {
+      &:hover {
+        background: $color_silver_chalice_approx;
+      }
+      &:before {
+        opacity: 0.3;
+      }
+    }
+    input {
+      background: $color_alto_approx;
+    }
+  }
+}

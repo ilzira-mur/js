@@ -1,0 +1,33 @@
+.UItab {
+  &__items-nav {
+    display: flex;
+    align-items: center;
+    padding-bottom: 35px;
+  }
+
+  &__item-nav {
+    margin-right: 40px;
+    color: $dark-blue;
+
+    &.active {
+      font-weight: 700;
+    }
+
+    a {
+      color: inherit;
+      transition: 0.3s;
+
+      &:hover {
+        opacity: 0.85;
+      }
+    }
+  }
+
+  &__item-content {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}

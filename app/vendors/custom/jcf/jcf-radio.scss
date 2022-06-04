@@ -1,0 +1,35 @@
+.jcf-radio {
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  margin: 0 3px 0 0;
+  border: 1px solid $color_tapa_approx; //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 9px;
+  vertical-align: middle;
+  background: $white;
+  cursor: default;
+  span {
+    display: none;
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    border-radius: 100%;
+    background: $color_tapa_approx; //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  }
+  input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 0;
+  }
+  &.jcf-checked span {
+    display: block;
+  }
+}

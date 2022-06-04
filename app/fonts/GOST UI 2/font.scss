@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'GOST UI 2';
+  font-style: normal;
+  font-weight: 500;
+  src: url('GOSTUI2-Medium.eot');
+  src: url('GOSTUI2-Medium.eot?#iefix') format('embedded-opentype'),
+    url('GOSTUI2-Medium.woff2') format('woff2'), url('GOSTUI2-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'GOST UI 2';
+  font-style: normal;
+  font-weight: normal;
+  src: url('GOSTUI2.eot');
+  src: url('GOSTUI2.eot?#iefix') format('embedded-opentype'), url('GOSTUI2.woff2') format('woff2'),
+    url('GOSTUI2.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'GOST UI 2';
+  font-style: normal;
+  font-weight: bold;
+  src: url('GOSTUI2-Bold.eot');
+  src: url('GOSTUI2-Bold.eot?#iefix') format('embedded-opentype'),
+    url('GOSTUI2-Bold.woff2') format('woff2'), url('GOSTUI2-Bold.woff') format('woff');
+}
+
+.font-GOSTUI2 {
+  font-family: 'GOST UI 2';
+}

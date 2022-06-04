@@ -1,0 +1,27 @@
+$spacer: 8px;
+$spacers: ();
+@for $i from 1 through 30 {
+  $data-spacer: (
+    $i: $i * $spacer,
+  );
+  $spacers: map-merge($spacers, $data-spacer);
+}
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+);
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px,
+);
+$grid-columns: 12;
+$grid-gutter-width: 20px;
+$font-size-base: 1rem;
+$font-weight-base: 400;
+$line-height-base: (24/16);

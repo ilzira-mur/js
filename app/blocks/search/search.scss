@@ -1,0 +1,82 @@
+.search {
+  $r: &;
+
+  &--has-value {
+    #{$r}__btn-delete {
+      display: block;
+    }
+
+    #{$r}__input {
+      border-color: #e5e5e5;
+    }
+  }
+
+  position: relative;
+  display: flex;
+
+  &__input {
+    display: block;
+    flex: 1 1 auto;
+    padding: 16px 51px 16px 58px;
+    overflow: hidden;
+    font-size: 16px;
+    line-height: normal;
+    color: #000;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: 1px solid #007bff;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    outline: none;
+    -webkit-appearance: none;
+
+    @include placeholder {
+      color: #000 !important;
+    }
+
+    &::-ms-clear {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  &__btn {
+    display: block;
+    flex: 0 0 169px;
+    max-width: 169px;
+    padding: 17px 16px 15px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    background-color: #376ee3;
+    border: none;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    appearance: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__btn-delete {
+    position: absolute;
+    top: 50%;
+    right: calc(169px + 20px);
+    display: none;
+    color: #000;
+    cursor: pointer;
+    transform: translateY(-50%);
+  }
+
+  &__icon-search {
+    position: absolute;
+    top: 50%;
+    left: 24px;
+    color: #d7d7d7;
+    transform: translateY(-50%);
+  }
+}

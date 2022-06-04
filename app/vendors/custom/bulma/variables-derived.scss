@@ -1,0 +1,66 @@
+$primary: $turquoise;
+$info: $cyan;
+$success: $green;
+$warning: $yellow;
+$danger: $red;
+$light: $white-ter;
+$dark: $grey-darker;
+
+// Invert colors
+
+$orange-invert: findcolorinvert($orange);
+$yellow-invert: findcolorinvert($yellow);
+$green-invert: findcolorinvert($green);
+$turquoise-invert: findcolorinvert($turquoise);
+$cyan-invert: findcolorinvert($cyan);
+$blue-invert: findcolorinvert($blue);
+$purple-invert: findcolorinvert($purple);
+$red-invert: findcolorinvert($red);
+$primary-invert: $turquoise-invert;
+$info-invert: $cyan-invert;
+$success-invert: $green-invert;
+$warning-invert: $yellow-invert;
+$danger-invert: $red-invert;
+$light-invert: $dark;
+$dark-invert: $light;
+
+// General colors
+
+$background: $white-ter;
+$border: $grey-lighter;
+$border-hover: $grey-light;
+
+// Text colors
+
+$text: $black;
+$text-invert: findcolorinvert($text);
+$text-light: $grey;
+$text-strong: $grey-darker;
+
+// Code colors
+
+$code: $red;
+$code-background: $background;
+$pre: $text;
+$pre-background: $background;
+
+// Link colors
+
+$link: $green;
+$link-invert: $green-invert;
+$link-visited: $purple;
+$link-hover: $green-light;
+$link-hover-border: $green-light;
+$link-focus: $green;
+$link-focus-border: $blue;
+$link-active: $green;
+$link-active-border: $green;
+
+// Typography
+
+$family-primary: $family-sans-serif;
+$family-code: $family-monospace;
+$size-small: $size-7;
+$size-normal: $size-6;
+$size-medium: $size-5;
+$size-large: $size-4;

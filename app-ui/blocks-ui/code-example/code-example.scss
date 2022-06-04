@@ -1,0 +1,98 @@
+.code-example {
+  $r: &;
+
+  &__title {
+    margin-bottom: 16px;
+
+    & > * {
+      margin-bottom: 0;
+    }
+  }
+
+  &__line {
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__toggle {
+    border: 1px solid $pale-grey;
+    border-radius: 4px;
+
+    &.open {
+      #{$r}__toggle-btn {
+        border-color: $steel;
+
+        &:after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__toggle-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      color: inherit;
+
+      #{$r}__toggle-btn {
+        border-color: $steel;
+      }
+    }
+  }
+
+  &__toggle-title {
+    max-width: calc(100% - 2.5rem - 32px);
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $dark;
+
+    & > * {
+      margin: 0;
+    }
+  }
+
+  &__toggle-btn {
+    position: relative;
+    flex: none;
+    width: rem(40);
+    height: rem(40);
+    margin-left: 16px;
+    border: 1px solid $pale-grey;
+    border-radius: 4px;
+    font-size: rem(26);
+    font-weight: bold;
+    line-height: rem(40);
+    text-align: center;
+    transition: 0.3s;
+
+    &:after {
+      content: "\E313";
+      display: block;
+      font-family: "Material Icons";
+      color: $steel;
+      transition: 0.3s;
+    }
+  }
+
+  &__toggle-main {
+    display: none;
+  }
+
+  &__toggle-main-content {
+    padding-top: 16px;
+    padding-right: 32px;
+    padding-bottom: 24px;
+    padding-left: 32px;
+  }
+}

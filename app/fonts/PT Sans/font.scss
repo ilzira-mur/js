@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'PT Sans';
+  font-style: italic;
+  font-weight: bold;
+  src: url('PTSans-BoldItalic.eot');
+  src: url('PTSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('PTSans-BoldItalic.woff2') format('woff2'), url('PTSans-BoldItalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: bold;
+  src: url('PTSans-Bold.eot');
+  src: url('PTSans-Bold.eot?#iefix') format('embedded-opentype'),
+    url('PTSans-Bold.woff2') format('woff2'), url('PTSans-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: normal;
+  src: url('PTSans-Regular.eot');
+  src: url('PTSans-Regular.eot?#iefix') format('embedded-opentype'),
+    url('PTSans-Regular.woff2') format('woff2'), url('PTSans-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: italic;
+  font-weight: normal;
+  src: url('PTSans-Italic.eot');
+  src: url('PTSans-Italic.eot?#iefix') format('embedded-opentype'),
+    url('PTSans-Italic.woff2') format('woff2'), url('PTSans-Italic.woff') format('woff');
+}
+
+.font-PTSans {
+  font-family: 'PT Sans';
+}

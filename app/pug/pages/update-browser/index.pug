@@ -1,0 +1,71 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Как включить обновить браузер';
+
+block header
+block content
+  +b.browser-warning
+    +e.wrapper
+      +e.container
+        +e.title
+          | Ваш браузер устарел!
+        +e.P.description
+          | Обновите ваш браузер для правильного отображения этого сайта.
+          br
+          | Выберите браузер
+        +e.content
+          +e.content-wrapper
+            label
+              +e.INPUT.info-checker.--chrome(type="radio" name="browser" value="Chrome" checked="")
+              +e.info-checker-icon.--chrome(data-name="Chrome")
+              +e.info.--chrome
+                +e.info-text.--chrome
+                  +e.info-text-title Google Chrome:
+                  +e.P.info-text-description
+                    a(href="https://www.google.com/chrome/") Скачать браузре
+            label
+              +e.INPUT.info-checker.--opera(type="radio" name="browser" value="Opera")
+              +e.info-checker-icon.--opera(data-name="Opera")
+              +e.info.--opera
+                +e.info-text.--opera
+                  +e.info-text-title Opera:
+                  +e.P.info-text-description
+                    a(href="https://www.opera.com") Скачать браузре
+            label
+              +e.INPUT.info-checker.--ff(type="radio" name="browser" value="Firefox")
+              +e.info-checker-icon.--ff(data-name="Firefox")
+              +e.info.--ff
+                +e.info-text.--ff
+                  +e.info-text-title Mozilla Firefox:
+                  +e.P.info-text-description
+                    a(href="http://www.mozilla.org") Скачать браузре
+            label
+              +e.INPUT.info-checker.--ya(type="radio" name="browser" value="Yandex")
+              +e.info-checker-icon.--ya(data-name="Yandex")
+              +e.info.--ya
+                +e.info-text.--ya
+                  +e.info-text-title Yandex:
+                  +e.P.info-text-description
+                    a(href="https://browser.yandex.ru") Скачать браузре
+            label
+              +e.INPUT.info-checker.--safari(type="radio" name="browser" value="Safari")
+              +e.info-checker-icon.--safari(data-name="Safari")
+              +e.info.--safari
+                +e.info-text.--safari
+                  +e.info-text-title Apple Safari:
+                  +e.P.info-text-description
+                    a(href="https://www.apple.com/macos/mojave/") Скачать браузре
+            label
+              +e.INPUT.info-checker.--edge(type="radio" name="browser" value="Microsoft Edge")
+              +e.info-checker-icon.--edge(data-name="Microsoft Edge")
+              +e.info.--edge
+                +e.info-text.--edge
+                  +e.info-text-title Microsoft Edge:
+                  +e.P.info-text-description
+                    a(href="https://www.microsoft.com/ru-ru/software-download/windows10") Скачать браузре
+          +e.content-footer.--no-js
+            | По завершении установки, откройте сайт в новом браузере
+
+
+block footer

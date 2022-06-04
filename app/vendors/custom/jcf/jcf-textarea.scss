@@ -1,0 +1,38 @@
+.jcf-textarea {
+  display: inline-block;
+  position: relative;
+  box-sizing: content-box;
+  border: 1px solid $color_submarine_approx; //Instead of the line below you could use @include box-sizing($bs)
+  .jcf-scrollbar-horizontal {
+    display: none;
+    height: 0;
+  }
+  textarea {
+    margin: 0;
+    padding: 8px 10px;
+    border: none;
+  }
+  .jcf-resize {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 14px;
+    height: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 15px;
+    text-align: center;
+    text-indent: 1px;
+    background: $color_mercury_approx;
+    cursor: se-resize;
+    &:before {
+      content: "";
+      display: block;
+      width: 6px;
+      height: 6px;
+      margin: 4px 0 0 3px;
+      border: 1px solid $black;
+      border-width: 0 1px 1px 0;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+// ноутбук
+@mixin media-lg {
+  @media (max-width: 1600px) {
+    @content;
+  }
+}
+//  планшет - горизонтальная ориентация
+@mixin media-md {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+//  планшет - вертикальная ориентация
+@mixin media-sm {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+//  мобильное устройство
+@mixin media-xsm {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+// https://habr.com/ru/post/348502/
+/* stylelint-disable media-feature-name-no-unknown */
+@mixin media-has-mouse {
+  @media (hover), (min-width: 0\0), (min--moz-device-pixel-ratio: 0) {
+    @content;
+  }
+}

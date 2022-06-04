@@ -1,0 +1,25 @@
+extends ./../../layout/layout
+
+block variables
+  -
+    const components = [
+
+      'header'
+    ]
+
+block content
+  +b.UIpage
+    +e.sidebar
+      +b.UIsidebar
+        +e.slide.e-scroll
+          +b.UIlist.--state
+            +e.search
+              +b.UIinput-filter
+                form
+                  input(type='text' placeholder='Поиск')
+            +e.items
+              each component, index in components
+                +e.item(class= index == 0 ? "active" : "")
+                  +e.item-link(href=`${component}`)= component
+
+    +e.content

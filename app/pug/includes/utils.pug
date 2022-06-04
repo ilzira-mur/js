@@ -1,0 +1,35 @@
+//- Если JS отключен - начало
+noscript
+  div(style="padding: 24px; color: #fff; width: 100%; background-color: #dd5656; font-weight: 700; text-align: center; position: fixed; z-index: 999999")
+    | Для корректной работы сайта необходимо
+    a(href="nojs-browser.html") включить поддержку JavaScript
+//- Если JS отключен - конец
+//-
+//- Проверка на версию для слабовидящих - начало
+//- script.
+//-   var session = sessionStorage && sessionStorage.visionSettings && JSON.parse(sessionStorage.visionSettings).open && JSON.parse(sessionStorage.visionSettings);
+//-   if (session) {
+//-     document.documentElement.className += ' vision-version vision-font-size-' + session.fontSize + ' vision-theme-' + session.theme;
+//-   }
+//- Проверка на версию для слабовидящих - конец
+//-
+//- Проверка на старые браузеры - начало
+#outdated
+  h6 Ваш браузер устарел!
+  p
+    | Обновите ваш браузер для правильного отображения этого сайта.
+    a#btnUpdateBrowser(href="update-browser.html") Обновить мой браузер
+  link(rel="stylesheet" type="text/css" href="static/libs/outdatedbrowser/outdatedbrowser.min.css")
+  script(src="static/libs/outdatedbrowser/outdatedbrowser.min.js")
+  script.
+    window.onload = function() {
+      $(function() {
+        if (!!window.outdatedBrowser) {
+          $("#outdated").css("display") == "block" ? $("#outdated").nextAll('*').remove() : $("#outdated").remove()
+        }
+      })
+    }
+
+    //Проверка на IE10+
+    outdatedBrowser({lowerThan: "transform", languagePath: ""})
+//- Проверка на старые браузеры - конец

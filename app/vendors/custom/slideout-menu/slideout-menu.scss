@@ -1,0 +1,43 @@
+.slideout-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  width: 256px;
+  overflow-y: scroll;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.slideout-panel {
+  position: relative;
+  z-index: 1;
+
+  will-change: transform;
+}
+
+.slideout-open, .slideout-open body, .slideout-open .slideout-panel {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
+}
+
+// .panel:before {
+//   content: '';
+//   display: block;
+//   background-color: rgba(0, 0, 0, 0);
+//   transition: background-color 0.5s ease-in-out;
+// }
+// .panel-open:before {
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   width: 100%;
+//   background-color: rgba(0, 0, 0, .5);
+//   z-index: 99;
+// }

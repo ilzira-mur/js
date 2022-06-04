@@ -1,0 +1,21 @@
+.UItitle-line {
+  display: flex;
+  align-items: center;
+  font-size: 21px;
+  color: #9ba3ac;
+
+  &__main {
+    margin-left: 10px;
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 0;
+      color: #fff;
+    }
+  }
+
+  &__subtitle {
+    font-size: 21px;
+    color: #9ba3ac;
+  }
+}

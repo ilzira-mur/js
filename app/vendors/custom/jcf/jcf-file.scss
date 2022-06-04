@@ -1,0 +1,54 @@
+.jcf-file {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  background: $white;
+  height: 48px;
+  border: 1px solid $grey-dark;
+  border-radius: 8px;
+  background-color: $white;
+
+  .jcf-real-element {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 200px;
+    margin: 0;
+    font-size: 200px;
+    cursor: pointer;
+  }
+
+  .jcf-fake-input {
+    flex-grow: 1;
+    height: 100%;
+    overflow: hidden;
+    padding: 0 8px;
+    font-size: 13px;
+    line-height: 28px;
+    vertical-align: top;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: $black;
+  }
+
+  .jcf-upload-button {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 0 0 -1px;
+    padding: 0 10px;
+    line-height: 28px;
+    vertical-align: top;
+    white-space: nowrap;
+    border-left: 1px solid $grey-dark;
+  }
+}

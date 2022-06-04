@@ -1,0 +1,54 @@
+// @import "~@mdi/font/scss/materialdesignicons.scss";
+@import '~bulma/sass/utilities/functions.sass';
+@import 'variables';
+
+//Отступы
+// @import "_spacing";
+//Флекс классы
+// @import "_flex";
+//Общие файлы фреймворка
+@import '~bulma/sass/utilities/_all.sass';
+@import '~bulma/sass/base/_all.sass';
+//Элементы фреймворка
+// @import "~bulma/sass/elements/box.sass";
+// @import "~bulma/sass/elements/button.sass";
+// @import "~bulma/sass/elements/container.sass";
+@import '~bulma/sass/elements/content.sass';
+// @import "~bulma/sass/elements/form.sass";
+// @import "~bulma/sass/elements/icon.sass";
+// @import "~bulma/sass/elements/image.sass";
+// @import "~bulma/sass/elements/notification.sass";
+// @import "~bulma/sass/elements/other.sass";
+// @import "~bulma/sass/elements/progress.sass";
+@import '~bulma/sass/elements/table.sass';
+// @import "~bulma/sass/elements/tag.sass";
+@import '~bulma/sass/elements/title.sass';
+//Компоненты фреймворка
+// @import "~bulma/sass/components/breadcrumb.sass";
+// @import "~bulma/sass/components/card.sass";
+// @import "~bulma/sass/components/dropdown.sass";
+// @import "~bulma/sass/components/level.sass";
+// @import "~bulma/sass/components/list.sass";
+// @import "~bulma/sass/components/media.sass";
+// @import "~bulma/sass/components/menu.sass";
+// @import "~bulma/sass/components/message.sass";
+// @import "~bulma/sass/components/modal.sass";
+// @import "~bulma/sass/components/navbar.sass";
+// @import "~bulma/sass/components/pagination.sass";
+// @import "~bulma/sass/components/panel.sass";
+// @import "~bulma/sass/components/tabs.sass";
+//Сетка фреймворка
+// @import "~bulma/sass/grid/_all.sass";
+// @import "~bulma/sass/layout/_all.sass";
+
+//Костыль
+// .columns {
+//   margin-top: 0;
+//   &:last-child {
+//     margin-bottom: 0;
+//   }
+// }
+// .column {
+//   padding-top: 0;
+//   padding-bottom: 0;
+// }

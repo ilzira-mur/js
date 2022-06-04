@@ -1,0 +1,162 @@
+.jcf-select {
+  display: block;
+  position: relative;
+  min-width: 150px;
+  border: 1px solid $grey-dark;
+  border-radius: 8px;
+  background-color: $white;
+  cursor: pointer;
+
+  select {
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  &.jcf-select-field__control-select--size-lg {
+    .jcf-select-text {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      font-size: 20px;
+    }
+  }
+
+  .field--theme-white & {
+    background-color: rgba(244, 247, 251, 0.08);
+  }
+
+  &.jcf-focus {
+    border-color: $black;
+    // box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  &.jcf-drop-active {
+    border-color: $black;
+    // box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+
+    .jcf-select-opener {
+      transform: rotate(180deg);
+    }
+  }
+
+  &.jcf-disabled {
+    .jcf-select-text {
+      color: $grey-dark;
+    }
+  }
+
+  .jcf-select-text {
+    display: block;
+    overflow: hidden;
+    margin: 0 40px 0 16px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 32px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: $black;
+    cursor: pointer;
+
+    .field--theme-white & {
+      color: $white;
+    }
+
+    .jcf-option-placeholder {
+      color: $grey-dark;
+    }
+  }
+
+  .jcf-select-opener {
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    color: $black;
+
+    &::before {
+      content: 'expand_more';
+
+      @include material-icons;
+
+      .field--theme-white & {
+        color: $white;
+      }
+    }
+  }
+
+  .jcf-select-drop {
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    right: -1px;
+    z-index: 9999;
+    margin-top: 0;
+  }
+
+  .jcf-drop-flipped {
+    top: auto;
+    bottom: 100%;
+  }
+
+  &.jcf-compact-multiple {
+    max-width: 220px;
+
+    .jcf-select-opener::before {
+      content: '...';
+      display: inline-block;
+      padding-top: 2px;
+    }
+  }
+}
+
+.jcf-select-drop {
+  .jcf-option-placeholder {
+    display: none;
+  }
+
+  .jcf-select-drop-content {
+    padding-top: 2px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  &.jcf-compact-multiple {
+    .jcf-hover {
+      background: none;
+    }
+
+    .jcf-selected {
+      background-color: $grey-light;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 8px;
+        height: 4px;
+        margin: -7px 5px 0 -3px;
+        border: 3px solid $color_tapa_approx;
+        border-width: 0 0 3px 3px; //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .jcf-hover {
+    background-color: $grey-light;
+  }
+}
+
+body > .jcf-select-drop {
+  position: absolute;
+  z-index: 9999;
+  margin: -1px 0 0;
+
+  &.jcf-drop-flipped {
+    margin: 1px 0 0;
+  }
+}

@@ -1,0 +1,42 @@
+include ../../../node_modules/bemto.pug/bemto
+- set_bemto_settings({ modifier: "--" })
+//- - const stamp = Math.round(new Date().getTime() / 1000)
+
+include ../includes/data
+include ../includes/require
+include ../mixins/icon
+
+block variables
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title #{title}
+    script(src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0")
+    include ../includes/meta
+    include ../includes/icons
+
+    include ../includes/common-medin-styles
+    block page-styles
+
+  body
+    block header
+      include ../../blocks/header/template  
+    block content
+    block footer
+      include ../../blocks/footer/template
+    include ../includes/old-browsers
+
+    include ../includes/common-medin-scripts
+    block page-scripts
+
+    if exampleScripts
+      // В файле example_###.js пример кода только для этой страницы
+      // удалить файл при натяжке, код оберунть в тег script
+      block exampleScripts  
+
+
+    include ../includes/gosbar
+
+     //JS файлы которые начинаются с markup_ и example_ используются ТОЛЬКО в верстке, к себе не тянуть и не подключать!

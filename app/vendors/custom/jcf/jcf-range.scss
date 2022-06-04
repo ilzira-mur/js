@@ -1,0 +1,113 @@
+.jcf-range {
+  display: inline-block;
+  min-width: 200px;
+  width: 130px;
+  margin: 0 10px;
+  .jcf-range-track {
+    display: block;
+    position: relative;
+    height: 10px;
+    margin: 0 20px 0 0;
+  }
+  .jcf-range-wrapper {
+    display: block;
+    position: relative;
+    margin: 5px 0;
+    border-radius: 5px;
+    background: $mercury; //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  }
+  &.jcf-vertical {
+    min-width: 0;
+    width: auto;
+    .jcf-range-wrapper {
+      width: 10px;
+      height: auto;
+      margin: 0;
+      padding: 20px 0 0;
+    }
+    .jcf-range-track {
+      width: 10px;
+      height: 180px;
+    }
+    .jcf-range-handle {
+      top: auto;
+      left: -5px;
+    }
+    .jcf-range-display-wrapper {
+      top: 10px;
+      bottom: 10px;
+      left: auto;
+      right: auto;
+    }
+    .jcf-range-display {
+      &.jcf-range-min {
+        margin: 0 0 -10px;
+        padding: 0 0 10px;
+      }
+      &.jcf-range-max {
+        margin: -10px 0 0;
+        padding: 10px 0 0;
+      }
+    }
+    .jcf-range-mark {
+      top: auto;
+      left: 14px;
+      width: 3px;
+      height: 1px;
+      margin: 0 0 9px;
+    }
+  }
+  .jcf-range-display-wrapper {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    min-width: 10px;
+    min-height: 10px;
+  }
+  .jcf-range-display {
+    position: absolute;
+    width: 10px;
+    height: 10px; //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 5px;
+    background: $color_suva_gray_approx;
+    &.jcf-range-min {
+      margin: 0 0 0 -10px;
+      padding: 0 0 0 10px;
+    }
+    &.jcf-range-max {
+      margin: 0 -10px 0 0;
+      padding: 0 10px 0 0;
+    }
+  }
+  .jcf-range-handle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 19px;
+    height: 19px;
+    margin: -4px 0 0;
+    border-radius: 19px;
+    background: $color_silver_chalice_approx; //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  }
+  .jcf-range-mark {
+    position: absolute;
+    top: -7px;
+    width: 1px;
+    height: 3px;
+    overflow: hidden;
+    margin: 0 0 0 9px;
+    background: $black;
+  }
+  .jcf-active-handle {
+    z-index: 2;
+  }
+  &.jcf-disabled {
+    background: none !important;
+    opacity: 0.3;
+  }
+  &.jcf-focus .jcf-active-handle {
+    margin: -5px 0 0 -1px;
+    border: 1px solid $red;
+  }
+}

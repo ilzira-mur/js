@@ -1,0 +1,190 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Услуги и цены';
+  - var gosbar = false;
+
+block page-styles 
+
+block page-scripts
+
+block content
+
+  .maincontent
+    .container
+      .row
+        .col-sm-12
+          .bx-breadcrumb.breadcrumb(aria-label='breadcrumb' itemprop='http://schema.org/breadcrumb' itemscope='' itemtype='http://schema.org/BreadcrumbList')
+            #bx_breadcrumb_0.breadcrumb-item(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
+              a(href='/' title='Главная' itemprop='url')
+                span(itemprop='name') Главная
+              meta(itemprop='position' content='1')
+            #bx_breadcrumb_1.breadcrumb-item(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
+              a(href='/o-medintsentre/' title='О мединцентре' itemprop='url')
+                span(itemprop='name') О мединцентре
+              meta(itemprop='position' content='2')
+            #bx_breadcrumb_2.breadcrumb-item(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
+              a(href='/o-medintsentre/uslugi-i-tseny/' title='Услуги и цены' itemprop='url')
+                span(itemprop='name') Услуги и цены
+              meta(itemprop='position' content='3')
+            .breadcrumb-item(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
+              span(itemprop='name') Тарифы на платные медицинские и иные услуги
+              meta(itemprop='position' content='4')
+            div(style='clear:both')
+    .container
+      .row.align-items-center
+        .col-sm-12
+          .section-title-heading-grey.label_tit.cursor
+            .row
+              .col-sm-9
+                h2 Услуги и цены
+              .col-md-3(style='text-align: right;')
+                .block-soc
+                  img(src='http://medin.staging.sitesoft.ru/bitrix/templates/medin/img/share.png')
+                  .box_link_soc
+                    a.push.facebook(onclick="Share.vkontakte('http://medin.staging.sitesoft.ru:80/','','','')")
+                      img(width='30' src='http://medin.staging.sitesoft.ru/bitrix/templates/medin/img/vk.png' alt='')
+                    a.push.vkontakte(onclick="Share.facebook('http://medin.staging.sitesoft.ru:80','','','')")
+                      img(width='30' src='http://medin.staging.sitesoft.ru/bitrix/templates/medin/img/fb.png' alt='')
+        .col-sm-12
+          .row
+            .col-sm-9
+              h2 Новости
+                .s(id="viewport")
+                  .d(class="slider" style="left: 0")
+                    .s(class="slide")
+                      .a(id="demo")
+                      .s(id="demo2")
+                      img(id="demo1")
+                    .s(class="slide")
+                      .a(id="demoinfo")
+                      .s(id="demotitile")
+                      img(id="demoimg")
+                    .s(class="slide")
+                      .a(id="demoinfothree")
+                      .s(id="demotitilethree")
+                      img(id="demoimgthree")
+                    .s(class="slide")
+                      .a(id="demoinfofour")
+                      .s(id="demotitilefour")
+                      img(id="demoimgfour")
+                    .s(class="slide")
+                      .a(id="demoinfofive")
+                      .s(id="demotitileffive")
+                      img(id="demoimgfive")
+                    .s(class="slide")
+                      .a(id="demoinfosix")
+                      .s(id="demotitilefsix")
+                      img(id="demoimgsix")
+                    .s(class="slide")
+                      .a(id="demoinfosseven")
+                      .s(id="demotitilefseven")
+                      img(id="demoimgseven")
+                .f(id="viewSlider")
+                  .d(class="viewSlide")
+                  .d(class="viewSlide")
+                  .d(class="viewSlide")
+                  .d(class="viewSlide")
+                  .d(class="viewSlide")
+                  .d(class="viewSlide")
+                  .d(class="viewSlide")
+                button(class="prev" id="prev") Назад
+                button(class="next" id="next") Вперед
+        
+        .col-sm-12
+          .row
+            .col-sm-9
+              h2 Диаграмма
+                canvas(class="canvas" id="myChart" width="300" height="200")
+        
+        .col-sm-12
+          .row
+            .col-sm-9
+              h2 Сотрудники
+                ul(id="people")
+        
+        .col-sm-12 
+          .mt-4 
+            include ../../../blocks/price-list/price-list
+
+
+  .faq-area
+    form#form_co.jsFormValid(method='POST' action='/ajax/ajax.php')
+      input(type='hidden' value='Обратная связь' name='type_form')
+      .container
+        .row
+          .section-title-heading.label_tit.col-sm-12
+            .row
+              .col-sm-12
+                h2 Обратная связь
+              .col-sm-12
+                .line
+          .col-xl-12.col-md-12.col-lg-12.col-sm-12
+            .alert.alert-success.succes_nomer(role='alert')
+              | Спасибо заявка успешно принята — № 
+              span.nomer_z
+          .col-xl-12.col-md-12.col-lg-12.col-sm-12
+            .view-rout.p-f
+              .dropdown
+                button.rout-but.dropdown-toggle.view_otdel(data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                  | ВЫБЕРИТЕ НАПРАВЛЕНИЕ
+                input.hid_otdel(type='hidden' name='otdel')
+                .dropdown-menu.fac_drop(aria-labelledby='dropdownMenu2')
+                  button.dropdown-item.otdel(data-val='Гинекологическое отделение КДЦ' title='Гинекологическое отделение КДЦ') Гинекологическое отделение КДЦ
+                  button.dropdown-item.otdel(data-val='Гинекологическое отделение стационара' title='Гинекологическое отделение стационара') Гинекологическое отделение стационара
+                  button.dropdown-item.otdel(data-val='Дерматовенерологическое отделение КДЦ' title='Дерматовенерологическое отделение КДЦ') Дерматовенерологическое отделение КДЦ
+                  button.dropdown-item.otdel(data-val='Кабинет травматологии и ортопедии КДЦ' title='Кабинет травматологии и ортопедии КДЦ') Кабинет травматологии и ортопедии КДЦ
+                  button.dropdown-item.otdel(data-val='Кардиологическое отделение КДЦ' title='Кардиологическое отделение КДЦ') Кардиологическое отделение КДЦ
+                  button.dropdown-item.otdel(data-val='Неврологическое отделение КДЦ' title='Неврологическое отделение КДЦ') Неврологическое отделение КДЦ
+                  button.dropdown-item.otdel(data-val='Неврологическое отделение стационара' title='Неврологическое отделение стационара') Неврологическое отделение стационара
+                  button.dropdown-item.otdel(data-val='Отделение амбулаторного приема' title='Отделение амбулаторного приема') Отделение амбулаторного приема
+                  button.dropdown-item.otdel(data-val='Отделение анестезиологии-реанимации стационара' title='Отделение анестезиологии-реанимации стационара') Отделение анестезиологии-реанимации стационара
+                  button.dropdown-item.otdel(data-val='Отделение диагностики КДЦ' title='Отделение диагностики КДЦ') Отделение диагностики КДЦ
+                  button.dropdown-item.otdel(data-val='Отделение диагностики стационара' title='Отделение диагностики стационара') Отделение диагностики стационара
+                  button.dropdown-item.otdel(data-val='Отделение лечебной физкультуры КДЦ' title='Отделение лечебной физкультуры КДЦ') Отделение лечебной физкультуры КДЦ
+                  button.dropdown-item.otdel(data-val='Отделение педиатрии КДЦ' title='Отделение педиатрии КДЦ') Отделение педиатрии КДЦ
+                  button.dropdown-item.otdel(data-val='Отделение пластической хирургии' title='Отделение пластической хирургии') Отделение пластической хирургии
+                  button.dropdown-item.otdel(data-val='Отделение скорой медицинской и неотложной помощи' title='Отделение скорой медицинской и неотложной помощи') Отделение скорой медицинской и неотложной помощи
+                  button.dropdown-item.otdel(data-val='Отделение стоматологии КДЦ' title='Отделение стоматологии КДЦ') Отделение стоматологии КДЦ
+                  button.dropdown-item.otdel(data-val='Оториноларингологическое отделение КДЦ' title='Оториноларингологическое отделение КДЦ') Оториноларингологическое отделение КДЦ
+                  button.dropdown-item.otdel(data-val='Терапевтическое отделение КДЦ' title='Терапевтическое отделение КДЦ') Терапевтическое отделение КДЦ
+                  button.dropdown-item.otdel(data-val='Терапевтическое отделение стационара' title='Терапевтическое отделение стационара') Терапевтическое отделение стационара
+                  button.dropdown-item.otdel(data-val='Физиотерапевтическое отделение КДЦ' title='Физиотерапевтическое отделение КДЦ') Физиотерапевтическое отделение КДЦ
+                  button.dropdown-item.otdel(data-val='Хирургическое отделение КДЦ' title='Хирургическое отделение КДЦ') Хирургическое отделение КДЦ
+                  button.dropdown-item.otdel(data-val='Хирургическое отделение стационара' title='Хирургическое отделение стационара') Хирургическое отделение стационара
+                  button.dropdown-item.otdel(data-val='Эндокринологическое отделение КДЦ' title='Эндокринологическое отделение КДЦ') Эндокринологическое отделение КДЦ
+          .form-group.col-sm-4.form-g
+            label.p-f(for='inputEmail4') Фамилия Имя Отчество
+            input.form-control.form_border(type='text' name='fio' required='required')
+          .form-group.col-sm-4.form-g
+            label.p-f(for='inputPassword4') E-mail для ответа
+            input.form-control.form_border(type='text' name='email' required='required')
+          .form-group.col-sm-4.form-g
+            label.p-f(for='inputAddress') Телефон для связи
+            input#phone.form-control.form_border(type='text' name='phone' required='required')
+          .form-group.col-sm-12.form-g
+            label.p-f Текст Вашего вопроса и/или отзыва
+            textarea.form-control.form_border(rows='7' name='text' required='required')
+          .form-group.col-sm-6
+            .form-group.form-check
+              input#politika.form-check-input(type='checkbox' required='required')
+              label.form-check-label(for='politika' style=' line-height: 18px;')
+                | Я даю согласие на обработку персональных данных в соответствии с установленной 
+                a(href='/upload/document/Politika_v_otnoshenii_obrabotki_personalnykh.pdf\
+                ' target='_blank') Политикой конфиденциальности.
+            // <div class="count_text p-f"> Знаков     <span>0 / 2000</span></div>
+          .form-group.col-sm-3
+            .file-upload
+              label
+                input(type='file' name='file')
+                | 						Выберите файл
+            input#filename.filename(type='text' disabled='')
+          .col-12.mb-4.captcha-control
+            .field
+              input(type='hidden' name='captcha_sid' value='027d77ee5b2c1ed6951ad7ba63bad60d')
+              img(src='/bitrix/tools/captcha.php?captcha_sid=027d77ee5b2c1ed6951ad7ba63bad60d' width='140' height='30' alt='CAPTCHA')
+              input(type='text' name='captcha_word' size='30' maxlength='50' value='')
+          .form-group.col-sm-3
+            button#co_property_captcha.btn.btn-primary.btn-block.btn_send(type='submit' disabled='') ОТПРАВИТЬ
+
+  br

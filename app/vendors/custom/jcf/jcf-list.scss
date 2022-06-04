@@ -1,0 +1,72 @@
+.jcf-list-box {
+  display: inline-block;
+  min-width: 200px;
+  overflow: hidden;
+  margin: 0 15px;
+  border: 1px solid $color_submarine_approx;
+
+  .jcf-selected {
+    color: $black;
+    background-color: $grey-light;
+  }
+}
+
+.jcf-list {
+  display: block;
+  position: relative;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: $grey-dark;
+  background-color: $white;
+
+  .jcf-list-content {
+    display: block;
+    width: 100%;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: block;
+      overflow: hidden;
+    }
+  }
+
+  .jcf-overflow {
+    overflow: auto;
+  }
+
+  .jcf-option {
+    display: block;
+    padding: 8px 16px;
+    color: $grey-dark;
+    cursor: pointer;
+
+    &.jcf-selected {
+      color: $black;
+    }
+  }
+
+  .jcf-disabled {
+    color: $color_silver_chalice_approx !important;
+    background: $white !important;
+  }
+
+  .jcf-optgroup-caption {
+    display: block;
+    padding: 5px 9px;
+    font-weight: bold;
+    white-space: nowrap;
+    color: $black;
+    cursor: default;
+  }
+
+  .jcf-optgroup .jcf-option {
+    padding-left: 30px;
+  }
+}

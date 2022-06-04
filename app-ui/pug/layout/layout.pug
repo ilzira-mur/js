@@ -1,0 +1,33 @@
+include ../../../node_modules/bemto.pug/bemto
+- set_bemto_settings({ modifier: "--" })
+//- - const stamp = Math.round(new Date().getTime() / 1000)
+
+include ../../../app/pug/includes/data
+include ../../../app/pug/includes/require
+include ../../../app/pug/mixins/icon
+
+block variables
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title #{title}
+    include ../../../app/pug/includes/meta
+    include ../../../app/pug/includes/icons
+    include ../../../app/pug/includes/old-browsers
+    include ../../../app/pug/includes/scripts
+
+    // Уникальные стили только для этой страницы - начало
+    block stylesPage
+    // Уникальные стили только для этой страницы - конец
+  body
+    .app#app
+      block header
+        include ../../blocks-ui/header/template.pug
+      block content
+      block footer
+
+    // Уникальные скрипты только для этой страницы - начало
+    block scriptsPage
+    // Уникальные скрипты только для этой страницы - конец

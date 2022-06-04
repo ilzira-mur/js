@@ -1,0 +1,78 @@
+.UIpage {
+  display: flex;
+  flex-grow: 1;
+  padding-top: 127px;
+
+  &__sidebar {
+    position: fixed;
+    top: 125px;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    height: 100%;
+    transform: translate(0);
+    transition: 0.3s;
+
+    &.hide {
+      transform: translate(-100vw);
+
+      @media (max-width: 1023px) {
+        transform: translate(0);
+      }
+    }
+
+    @media (max-width: 1023px) {
+      transform: translate(-100vw);
+    }
+  }
+
+  &__content {
+    width: 100%;
+
+    // padding-left: 330px;
+    padding-left: 165px;
+    background-color: #fff;
+
+    & > .container {
+      margin-left: 24px;
+    }
+
+    &.show {
+      padding-left: 0;
+
+      .container {
+        margin-left: auto;
+      }
+    }
+
+    @media (max-width: 1023px) {
+      padding-left: 0;
+
+      .container {
+        margin-left: auto;
+      }
+    }
+  }
+
+  &__content-container {
+    &--no-framework {
+      padding: 32px;
+    }
+  }
+
+  &__content-title {
+    margin-bottom: 32px;
+  }
+
+  &__content-tab {
+    margin-top: 32px;
+  }
+
+  &__wrapper {
+    width: 800px;
+    padding-top: rem(10);
+    padding-right: rem(20);
+    padding-bottom: rem(65);
+    padding-left: rem(85);
+  }
+}

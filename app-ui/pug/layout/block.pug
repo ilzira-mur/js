@@ -1,0 +1,40 @@
+include ../../../node_modules/bemto.pug/bemto
+- set_bemto_settings({ modifier: '--' })
+
+include ../../../app/pug/includes/require
+include ../../../app/pug/mixins/icon
+
+block variables
+
+- console.log(titleBlock)
+
++b.UIpage__content-container.--no-framework
+  +e.content-title
+    .UItitle-section
+      h1=titleBlock
+  +e.content-tab
+    +b.code-example
+      +e.line
+        +e.block
+          +e.title
+            h5 Блок
+          +e.block-content
+            block html
+          if js
+            +e.block-script
+              block js
+      +e.line
+        +e.code
+          +e.title
+            h5 Код блока HTML
+          +e.code-content
+            pre
+              code.html
+      if js
+        +e.line
+          +e.script
+            +e.title
+              h5 Код блока JS
+            +e.script-content
+              pre
+                code.javascript

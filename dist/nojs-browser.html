@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Как включить поддержку JavaScript</title>
+    <meta name="author" content="www.sitesoft.ru">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-TextLayoutMetrics" content="gdi">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="theme-color" content="#fff">
+    <link type="image/x-icon" href="static/img/favicon.ico" rel="icon">
+    <link type="image/x-icon" href="static/img/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="http://medin.staging.sitesoft.ru/bitrix/cache/css/s1/medin/kernel_main/kernel_main_v1.css">
+    <link rel="stylesheet" href="http://medin.staging.sitesoft.ru/bitrix/cache/css/s1/medin/template_f347d8c690e3472ac151e8d3303e61d2/template_f347d8c690e3472ac151e8d3303e61d2_v1.css">
+    <link rel="stylesheet" href="http://medin.staging.sitesoft.ru/bitrix/templates/medin/css/main.min.css">
+    <link rel="stylesheet" href="http://medin.staging.sitesoft.ru/bitrix/templates/medin/css/updk-header.min.css">
+    <link rel="stylesheet" href="http://medin.staging.sitesoft.ru/bitrix/templates/medin/css/custom.css">
+    <link rel="stylesheet" href="http://medin.staging.sitesoft.ru/bitrix/templates/medin/button-visually-impaired/css/bvi.min.css">
+    <link rel="stylesheet" href="http://medin.staging.sitesoft.ru/bitrix/templates/medin/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="http://medin.staging.sitesoft.ru/bitrix/templates/medin/css/pushy.css">
+    <link rel="stylesheet" href="http://medin.staging.sitesoft.ru/bitrix/templates/medin/css/3%20level%20link.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="http://medin.staging.sitesoft.ru/bitrix/css/main/font-awesome.css?154090031728777">
+    <link rel="stylesheet" href="https://translate.googleapis.com/translate_static/css/translateelement.css">
+    <link rel="stylesheet" href="https://www.gstatic.com/recaptcha/releases/Iwg4ANhK7Iu8SHToSsE0E20K/styles__ltr.css">
+    <link rel="stylesheet" href="http://medin.staging.sitesoft.ru/bitrix/templates/medin/css/app.css">
+    <link rel="stylesheet" href="http://medin.staging.sitesoft.ru/bitrix/templates/medin/css/custom.css?20181227">
+  <link href="styles/nojs-browser.db79.css" rel="stylesheet"></head>
+  <body>
+    <div class="browser-warning">
+      <div class="browser-warning__wrapper">
+        <div class="browser-warning__container">
+          <div class="browser-warning__title">В вашем браузере отключен JavaScript  
+          </div>
+          <p class="browser-warning__description">Для корректной работы сайта необходимо включить поддержку JavaScript.<br>Выберите браузер
+          </p>
+          <div class="browser-warning__content">
+            <div class="browser-warning__content-wrapper">
+              <label><input class="browser-warning__info-checker browser-warning__info-checker--chrome" type="radio" name="browser" value="Chrome" checked=""/>
+                <div class="browser-warning__info-checker-icon browser-warning__info-checker-icon--chrome" data-name="Chrome">
+                </div>
+                <div class="browser-warning__info browser-warning__info--chrome">
+                  <div class="browser-warning__info-text browser-warning__info-text--chrome">
+                    <div class="browser-warning__info-text-title">Google Chrome:
+                    </div>
+                    <p class="browser-warning__info-text-description browser-warning__info-text-description--hide-on-mobile">Откройте «Настройки содержимого» (chrome://settings/content) или «Настройки» (chrome://settings/) → «Показать дополнительные настройки» → «Настройки контента» и включите рекомендуемую опцию «Разрешить всем сайтам использовать JavaScript».
+                    </p>
+                    <p class="browser-warning__info-text-description browser-warning__info-text-description--show-on-mobile">Откройте «Настройки» → Выберите «Настройки сайта» → JavaScript и установите переключатель в  рекомендуемый режим «Разрешено».
+                    </p>
+                  </div>
+                </div>
+              </label>
+              <label><input class="browser-warning__info-checker browser-warning__info-checker--opera" type="radio" name="browser" value="Opera"/>
+                <div class="browser-warning__info-checker-icon browser-warning__info-checker-icon--opera" data-name="Opera">
+                </div>
+                <div class="browser-warning__info browser-warning__info--opera">
+                  <div class="browser-warning__info-text browser-warning__info-text--opera">
+                    <div class="browser-warning__info-text-title">Opera:
+                    </div>
+                    <p class="browser-warning__info-text-description">Меню «Инструменты» → «Настройки…» → «Дополнительно» → «Содержимое» → флаг «Включить JavaScript».
+                    </p>
+                  </div>
+                </div>
+              </label>
+              <label><input class="browser-warning__info-checker browser-warning__info-checker--ff" type="radio" name="browser" value="Firefox"/>
+                <div class="browser-warning__info-checker-icon browser-warning__info-checker-icon--ff" data-name="Firefox">
+                </div>
+                <div class="browser-warning__info browser-warning__info--ff">
+                  <div class="browser-warning__info-text browser-warning__info-text--ff">
+                    <div class="browser-warning__info-text-title">Mozilla Firefox:
+                    </div>
+                    <p class="browser-warning__info-text-description">Меню «Инструменты» → «Настройки…» → «Содержимое» → флаг «Использовать JavaScript».
+                    </p>
+                  </div>
+                </div>
+              </label>
+              <label><input class="browser-warning__info-checker browser-warning__info-checker--ya" type="radio" name="browser" value="Yandex"/>
+                <div class="browser-warning__info-checker-icon browser-warning__info-checker-icon--ya" data-name="Yandex">
+                </div>
+                <div class="browser-warning__info browser-warning__info--ya">
+                  <div class="browser-warning__info-text browser-warning__info-text--ya">
+                    <div class="browser-warning__info-text-title">Yandex:
+                    </div>
+                    <p class="browser-warning__info-text-description">«Настройки» → «Показать дополнительные настройки» → В блоке «Защита личных данных» выбрать «Настройки содержимого» → включить опцию «Разрешить JavaScript на всех сайтах».
+                    </p>
+                  </div>
+                </div>
+              </label>
+              <label><input class="browser-warning__info-checker browser-warning__info-checker--safari" type="radio" name="browser" value="Safari"/>
+                <div class="browser-warning__info-checker-icon browser-warning__info-checker-icon--safari" data-name="Safari">
+                </div>
+                <div class="browser-warning__info browser-warning__info--safari">
+                  <div class="browser-warning__info-text browser-warning__info-text--safari">
+                    <div class="browser-warning__info-text-title">Apple Safari:
+                    </div>
+                    <p class="browser-warning__info-text-description browser-warning__info-text-description--hide-on-mobile">Меню «Safari» → «Свойства» → «Безопасность» → флаг «Включить JavaScript».
+                    </p>
+                    <p class="browser-warning__info-text-description browser-warning__info-text-description--show-on-mobile">Откройте приложение «Настройки» → Выберите Safari → Дополнения → Включите переключатель JavaScript.
+                    </p>
+                  </div>
+                </div>
+              </label>
+              <label><input class="browser-warning__info-checker browser-warning__info-checker--ie" type="radio" name="browser" value="Internet Explorer"/>
+                <div class="browser-warning__info-checker-icon browser-warning__info-checker-icon--ie" data-name="Internet Explorer">
+                </div>
+                <div class="browser-warning__info browser-warning__info--ie">
+                  <div class="browser-warning__info-text browser-warning__info-text--ie">
+                    <div class="browser-warning__info-text-title">Internet Explorer:
+                    </div>
+                    <p class="browser-warning__info-text-description">Меню «Сервис» → «Свойства обозревателя» → «Безопасность» → кнопка «Другой» → строчка «Включить» в пункте «Активные сценарии».
+                    </p>
+                  </div>
+                </div>
+              </label>
+            </div>
+            <div class="browser-warning__content-footer browser-warning__content-footer--no-js">По завершении <a class="browser-warning__link" href="/" rel="nofollow">обновите страницу</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js"></script><script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="http://medin.staging.sitesoft.ru/bitrix/cache/js/s1/medin/kernel_main/kernel_main_v1.js"> </script>
+    <script src="http://medin.staging.sitesoft.ru/bitrix/cache/js/s1/medin/kernel_main_polyfill_promise/kernel_main_polyfill_promise_v1.js"> </script>
+    <script src="http://medin.staging.sitesoft.ru/bitrix/js/main/loadext/loadext.min.js"> </script>
+    <script src="http://medin.staging.sitesoft.ru/bitrix/js/main/loadext/extension.min.js"> </script>
+    <script src="http://medin.staging.sitesoft.ru/bitrix/cache/js/s1/medin/template_a981bdf07de6801316abbed4a6c65061/template_a981bdf07de6801316abbed4a6c65061_v1.js"> </script>
+    <script src="http://medin.staging.sitesoft.ru/bitrix/templates/medin/js/handler.js"> </script>
+    <script src="http://medin.staging.sitesoft.ru/bitrix/templates/medin/js/pushy.min.js"></script>
+    <script src="http://medin.staging.sitesoft.ru/bitrix/templates/medin/js/jquery-ui.min.js"> </script>
+    <script src="http://medin.staging.sitesoft.ru/bitrix/templates/medin/js/jquery.ui.datepicker-ru.js"></script>
+    <script src="http://medin.staging.sitesoft.ru/bitrix/templates/medin/js/bootstrap.offcanvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">  </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/phone-codes/phone-ru.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"> </script>
+    <script src="http://bitrix.info/ba.js"> </script>
+    <script src="http://medin.staging.sitesoft.ru/bitrix/templates/medin/button-visually-impaired/js/bvi-init-panel.js"> </script>
+    <script src="http://medin.staging.sitesoft.ru/bitrix/templates/medin/button-visually-impaired/js/bvi.min.js"></script>
+    <script src="http://medin.staging.sitesoft.ru/bitrix/templates/medin/button-visually-impaired/js/js.cookie.js"></script>
+    <script src="https://translate.googleapis.com/translate_static/js/element/main_ru.js">  </script>
+    <!--JS файлы которые начинаются с markup_ и example_ используются ТОЛЬКО в верстке, к себе не тянуть и не подключать!-->
+  <script type="text/javascript" src="scripts/runtime.afed.js"></script><script type="text/javascript" src="scripts/nojs-browser.dff9.js"></script></body>
+</html>

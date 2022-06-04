@@ -1,0 +1,9 @@
+.svg-icon {
+  display: block;
+  fill: currentColor;
+
+  &--stroke {
+    fill: none;
+    stroke: currentColor;
+  }
+}

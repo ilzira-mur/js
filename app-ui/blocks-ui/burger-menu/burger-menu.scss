@@ -1,0 +1,82 @@
+.UIburger-menu {
+  $r: &;
+  display: flex;
+  align-items: center;
+  width: 29px;
+  height: 23px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+
+  &--color-white {
+    #{$r}__icon {
+      background-color: #fff;
+
+      &::before,
+      &::after {
+        background-color: #fff;
+      }
+    }
+  }
+
+  &__icon {
+    position: relative;
+    display: block;
+    width: 29px;
+    height: 3px;
+    border-radius: 10px;
+    background-color: $dark-blue;
+    transition: 0.3s;
+
+    .burger-menu.no-animation & {
+      transition: none;
+    }
+
+    .burger-menu.is-active &,
+    .topmenu-open & {
+      background-color: transparent;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      left: 0;
+      width: 29px;
+      height: 3px;
+      border-radius: 10px;
+      background-color: $dark-blue;
+      content: "";
+      transition: 0.3s;
+
+      .burger-menu.no-animation & {
+        transition: none;
+      }
+
+      .burger-menu.is-active &,
+      .topmenu-open & {
+        background-color: #000;
+      }
+    }
+
+    &::before {
+      top: -9px;
+      width: 29px;
+
+      .burger-menu.is-active &,
+      .topmenu-open & {
+        top: 0;
+        transform: rotate(45deg);
+      }
+    }
+
+    &::after {
+      top: 9px;
+
+      .burger-menu.is-active &,
+      .topmenu-open & {
+        top: 0;
+        width: 29px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

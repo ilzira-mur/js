@@ -1,0 +1,109 @@
+//colors
+@import '../../../scss/other/variables.scss';
+
+$color_tapa_approx: #777;
+$color_mercury_approx: #e3e3e3;
+$color_pink_swan_approx: #bbb;
+$color_suva_gray_approx: #888;
+$color_silver_chalice_approx: #aaa;
+$red: #f00;
+$black: #000;
+$white: #fff;
+$grey-dark: #a0a4a7;
+$grey-light: #eff0f0;
+$green: #03a06c;
+$light: $grey-light;
+$color_submarine_approx: #b8c3c9;
+$color_storm_dust_approx: #656565;
+$color_alto_approx: #ddd;
+$mercury: #e5e5e5;
+//@extend-elements
+//original selectors
+//.jcf-scrollbar-vertical .jcf-scrollbar-dec, .jcf-scrollbar-vertical .jcf-scrollbar-inc
+%extend_1 {
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  background: $color_pink_swan_approx;
+}
+
+//original selectors
+//.jcf-scrollbar-horizontal .jcf-scrollbar-dec, .jcf-scrollbar-horizontal .jcf-scrollbar-inc
+%extend_2 {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  overflow: hidden;
+  vertical-align: top;
+  background: $color_pink_swan_approx;
+}
+
+//original selectors
+//.jcf-number .jcf-btn-dec, .jcf-number .jcf-btn-inc
+%extend_3 {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 20px;
+  height: 15px;
+  background: $color_silver_chalice_approx;
+}
+
+//original selectors
+//.jcf-number .jcf-btn-dec:before, .jcf-number .jcf-btn-inc:before
+%extend_4 {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin: -6px 0 0 -4px;
+  border: 4px solid $color_silver_chalice_approx;
+  border-color: transparent transparent $black transparent;
+}
+
+.jcf-disabled {
+  background: $color_alto_approx !important;
+}
+
+@mixin material-icons {
+  /* Preferred icon size */
+  display: inline-block;
+  font-family: 'Material Icons';
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+
+  /* Support for IE. */
+
+  font-feature-settings: 'liga';
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+//Компоненты
+@import './jcf-button.scss';
+@import './jcf-checkbox.scss';
+@import './jcf-file.scss';
+@import './jcf-list.scss';
+@import './jcf-number.scss';
+@import './jcf-radio.scss';
+@import './jcf-range.scss';
+@import './jcf-scrollable.scss';
+@import './jcf-select.scss';
+@import './jcf-textarea.scss';

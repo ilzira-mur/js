@@ -1,0 +1,100 @@
+// @function rem ($px) {
+//   @return $px / 16px+0rem;
+// }
+@function rem($number) {
+  @if $number==0 {
+    @return 0;
+  }
+
+  @else {
+    @return $number/16*1rem;
+  }
+}
+
+@function vw($target, $viewport: 1920) {
+  $vw-context: ($viewport * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+
+@mixin hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin material-icons {
+  /* Preferred icon size */
+  display: inline-block;
+  font-family: "Material Icons";
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  /* Support for IE. */
+
+  font-feature-settings: "liga";
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+// State
+@mixin state-hover-focus {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin state-active {
+  &:not(.disabled):active {
+    @content;
+  }
+}
+
+@mixin state-disabled {
+  &:disabled,
+  &.disabled,
+  fieldset[disabled] & {
+    @content;
+  }
+}
